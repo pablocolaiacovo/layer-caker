@@ -32,8 +32,8 @@ export default async function Page({
                         .auto("format")
                         .url()}
                     alt={post?.mainImage?.alt || ""}
-                    width="800"
-                    height="300"
+                    width={800}
+                    height={300}
                 />
             ) : null}
             <h1 className="text-4xl font-bold text-balance">{post?.title}</h1>
