@@ -52,7 +52,7 @@ export function PageBuilder({
                 path: "content",
             }).toString()}
         >
-            {blocks.map((block) => {
+            {blocks.map((block, i) => {
                 const DragHandle = ({ children }: { children: React.ReactNode }) => (
                     <div
                         data-sanity={createDataAttribute({
@@ -93,7 +93,7 @@ export function PageBuilder({
                         );
                     default:
                         // This is a fallback for when we don't have a block type
-                        return <div key={block._key}>Block not found: {block._type}</div>;
+                        return <div key={i}>Block not found: {block}</div>;
                 }
             })}
         </main>
