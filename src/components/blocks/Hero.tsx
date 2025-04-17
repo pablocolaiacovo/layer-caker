@@ -14,9 +14,9 @@ export function Hero({ title, text, image }: HeroProps) {
         <section className="isolate w-full aspect-[2/1] py-16 relative overflow-hidden">
             <div className="relative flex flex-col justify-center items-center gap-8 h-full z-20">
                 {title ? (
-                    <h1 className="text-2xl md:text-4xl lg:text-6xl font-semibold text-white text-pretty max-w-3xl">
+                    <Title>
                         {title}
-                    </h1>
+                    </Title>
                 ) : null}
                 <div className="prose-lg lg:prose-xl prose-invert flex items-center">
                     {text ? <PortableText value={text} /> : null}
